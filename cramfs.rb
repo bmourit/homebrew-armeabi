@@ -14,7 +14,7 @@ class Cramfs <Formula
   def install
     mkdir 'cramfs-build'
     Dir.chdir 'cramfs-build' do
-      system "cmake .. #{std_cmake_parameters}"
+      system "cmake .. #{std_cmake_args}"
       system "make"
       system "make install"
     end
